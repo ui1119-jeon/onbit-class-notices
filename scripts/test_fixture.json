@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "server_time": "2099-01-01T10:00:00+09:00",
+  "homework": [
+    {
+      "id": "abc",
+      "date": "2026-09-30",
+      "subject": "기가",
+      "content": "학습지 3쪽 완성",
+      "performance": false,
+      "owner_id": "DO_NOT_EXPORT"
+    },
+    {
+      "id": "def",
+      "date": "2026-10-01",
+      "subject": "과학",
+      "content": "실험 발표 준비",
+      "performance": "true"
+    }
+  ],
+  "homeroom": [
+    {
+      "id": "123",
+      "display_order": 1,
+      "content": "내일 체육복 준비"
+    },
+    {
+      "id": "456",
+      "display_order": 2,
+      "content": "가정통신문 제출"
+    }
+  ]
+}

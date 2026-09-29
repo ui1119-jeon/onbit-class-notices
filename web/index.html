@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>3학년 4반 학급 안내</title>
+  <meta name="theme-color" content="#edf6fb" />
+  <style>
+    :root {
+      font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", system-ui, -apple-system, sans-serif;
+      color: #183247;
+      background: #edf6fb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #eaf5fc 0%, #f8fbfd 55%, #f2f6f8 100%);
+    }
+    button { font: inherit; }
+    .app {
+      width: min(720px, 100%);
+      margin: 0 auto;
+      padding: max(18px, env(safe-area-inset-top)) 14px max(34px, env(safe-area-inset-bottom));
+    }
+    .hero {
+      padding: 7px 4px 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: -.6px;
+    }
+    .meta {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+      color: #708595;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .snapshot-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.75);
+      border: 1px solid #d4e4ee;
+      color: #4c6d82;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .section {
+      background: rgba(255,255,255,.96);
+      border: 1px solid #d7e4ec;
+      border-radius: 18px;
+      box-shadow: 0 10px 26px rgba(47, 83, 107, .07);
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 15px 16px 13px;
+      border-bottom: 1px solid #eaf0f4;
+    }
+    .section-head strong {
+      font-size: 17px;
+      letter-spacing: -.3px;
+    }
+    .count {
+      min-width: 30px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #eef6fb;
+      color: #3278a4;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .notice-list {
+      margin: 0;
+      padding: 8px 16px 13px 44px;
+    }
+    .notice-list li {
+      padding: 11px 3px;
+      border-bottom: 1px dashed #e4edf2;
+      font-size: 16px;
+      line-height: 1.5;
+      word-break: keep-all;
+    }
+    .notice-list li:last-child { border-bottom: 0; }
+    .filters {
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      padding: 11px 12px 4px;
+      scrollbar-width: none;
+    }
+    .filters::-webkit-scrollbar { display: none; }
+    .filter {
+      border: 1px solid #cbdce7;
+      background: #fff;
+      color: #547288;
+      border-radius: 999px;
+      padding: 8px 12px;
+      white-space: nowrap;
+      font-size: 12px;
+      font-weight: 850;
+    }
+    .filter.active {
+      border-color: #347faa;
+      background: #347faa;
+      color: #fff;
+    }
+    .homework-list { padding: 8px 12px 13px; }
+    .day-group + .day-group { margin-top: 12px; }
+    .day-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 7px 4px 8px;
+    }
+    .day-head strong { font-size: 14px; }
+    .day-head span { color: #8295a3; font-size: 11px; }
+    .card {
+      margin-bottom: 8px;
+      padding: 12px 13px;
+      border: 1px solid #dfe9ef;
+      border-radius: 14px;
+      background: #fbfdff;
+    }
+    .card-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 7px;
+    }
+    .subject, .performance {
+      padding: 5px 8px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .subject { background: #e8f4fb; color: #246d99; }
+    .performance { background: #fff0f1; color: #b64a5a; }
+    .dday { margin-left: auto; color: #8295a3; font-size: 11px; font-weight: 800; }
+    .content {
+      font-size: 15px;
+      line-height: 1.52;
+      color: #213e53;
+      word-break: keep-all;
+    }
+    .empty {
+      padding: 28px 16px;
+      text-align: center;
+      color: #899ba8;
+      font-size: 14px;
+    }
+    .footer {
+      padding: 5px 8px 0;
+      text-align: center;
+      color: #91a2ae;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+    .reload {
+      margin-top: 11px;
+      border: 1px solid #cadce7;
+      background: rgba(255,255,255,.9);
+      color: #365f78;
+      border-radius: 999px;
+      padding: 8px 11px;
+      font-size: 12px;
+      font-weight: 850;
+    }
+    @media (min-width: 560px) {
+      .app { padding-left: 20px; padding-right: 20px; }
+      h1 { font-size: 30px; }
+      .notice-list li { font-size: 17px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p style="font-size:12px;color:#66849b;">Google 로그인 없이 이용하는 학급 공지</p>
+      <h1 id="title">학급 안내</h1>
+      <div class="meta">
+        <span id="today"></span>
+        <span id="updated"></span>
+      </div>
+      <div class="snapshot-note">서버 정기 갱신 목표 10:00 · 13:00 · 16:30</div>
+      <div id="status" role="status" style="margin-top:10px;font-size:13px;color:#bf6239;"></div>
+      <div><button class="reload" type="button" onclick="location.reload()">최신 스냅샷 확인</button></div>
+    </header>
+
+    <section class="section">
+      <div class="section-head">
+        <strong>조·종례 전달사항</strong>
+        <span id="notice-count" class="count">0</span>
+      </div>
+      <div id="notice-wrap"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <strong>숙제 · 수행평가</strong>
+        <span id="homework-count" class="count">0</span>
+      </div>
+      <div class="filters">
+        <button class="filter active" data-filter="7" type="button">7일</button>
+        <button class="filter" data-filter="today" type="button">오늘</button>
+        <button class="filter" data-filter="tomorrow" type="button">내일</button>
+        <button class="filter" data-filter="all" type="button">전체 예정</button>
+      </div>
+      <div id="homework-wrap" class="homework-list"></div>
+    </section>
+
+    <footer class="footer">
+      이 페이지는 조회 전용입니다.<br />
+      표시 내용은 마지막 정기 갱신 시점의 스냅샷입니다.<br />
+      학교 안내사항이 변경됐을 경우 갱신 시각을 확인하세요.
+    </footer>
+  </main>
+
+  <script>
+    // 학생·학부모 브라우저는 같은 웹사이트 안의 정적 JSON만 읽는다.
+    // 이 HTML은 Google Apps Script나 스프레드시트 주소를 포함하지 않는다.
+    let snapshot = { title: '학급 안내', homework: [], homeroom: [] };
+    const todayKey = koreaDateKey(new Date());
+    let activeFilter = '7';
+
+    document.getElementById('today').textContent = formatDateLong(todayKey);
+    document.querySelectorAll('.filter').forEach((button) => {
+      button.addEventListener('click', () => {
+        activeFilter = button.dataset.filter;
+        document.querySelectorAll('.filter').forEach((b) => b.classList.toggle('active', b === button));
+        renderHomework();
+      });
+    });
+
+    async function initialize() {
+      const status = document.getElementById('status');
+      const wrapNotice = document.getElementById('notice-wrap');
+      const wrapHomework = document.getElementById('homework-wrap');
+      status.textContent = '마지막 공개본을 불러오는 중입니다.';
+      wrapNotice.textContent = '';
+      wrapHomework.textContent = '';
+      try {
+        // Browser cache bypass; static hosting does not contact Google per visitor.
+        const response = await fetch('./snapshot.json?v=' + Date.now(), { cache: 'no-store' });
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const data = await response.json();
+        if (data.version !== 3 || !Array.isArray(data.homeroom) || !Array.isArray(data.homework)) {
+          throw new Error('공개 데이터 형식이 올바르지 않습니다.');
+        }
+        snapshot = data;
+        document.getElementById('title').textContent = snapshot.title || '학급 안내';
+        document.getElementById('updated').textContent = '마지막 업데이트 ' + formatUpdated(snapshot.updated_at);
+        const updatedAt = Date.parse(snapshot.updated_at);
+        const stale = Number.isFinite(updatedAt) && Date.now() - updatedAt > 24 * 60 * 60 * 1000;
+        status.textContent = stale
+          ? '※ 마지막 업데이트가 하루 이상 지났습니다. 다른 학교 공지도 확인해주세요.'
+          : '';
+        renderNotices();
+        renderHomework();
+      } catch (error) {
+        status.textContent = '게시 정보를 가져오지 못했습니다. 잠시 후 다시 접속하거나 학교에 문의해주세요.';
+        document.getElementById('updated').textContent = '현재 갱신 여부를 확인할 수 없습니다';
+        wrapNotice.textContent = '표시할 정보가 없습니다.';
+        wrapHomework.textContent = '표시할 정보가 없습니다.';
+      }
+    }
+    initialize();
+
+    function renderNotices() {
+      const items = Array.isArray(snapshot.homeroom) ? snapshot.homeroom : [];
+      document.getElementById('notice-count').textContent = String(items.length);
+      const wrap = document.getElementById('notice-wrap');
+      if (!items.length) {
+        wrap.innerHTML = '<div class="empty">현재 전달사항이 없습니다.</div>';
+        return;
+      }
+      const ol = document.createElement('ol');
+      ol.className = 'notice-list';
+      items
+        .slice()
+        .sort((a,b) => Number(a.display_order || 0) - Number(b.display_order || 0))
+        .forEach((item) => {
+          const li = document.createElement('li');
+          li.textContent = item.content || '';
+          ol.appendChild(li);
+        });
+      wrap.replaceChildren(ol);
+    }
+
+    function renderHomework() {
+      const all = (Array.isArray(snapshot.homework) ? snapshot.homework : [])
+        .filter((item) => item && item.date && item.date >= todayKey)
+        .sort((a,b) => a.date.localeCompare(b.date) || String(a.subject || '').localeCompare(String(b.subject || ''), 'ko'));
+      const filtered = filterHomework(all, activeFilter);
+      document.getElementById('homework-count').textContent = String(filtered.length);
+      const wrap = document.getElementById('homework-wrap');
+      if (!filtered.length) {
+        wrap.innerHTML = '<div class="empty">해당 기간의 숙제·수행평가가 없습니다.</div>';
+        return;
+      }
+
+      const groups = new Map();
+      filtered.forEach((item) => {
+        if (!groups.has(item.date)) groups.set(item.date, []);
+        groups.get(item.date).push(item);
+      });
+
+      const frag = document.createDocumentFragment();
+      groups.forEach((items, date) => {
+        const group = document.createElement('div');
+        group.className = 'day-group';
+
+        const head = document.createElement('div');
+        head.className = 'day-head';
+        head.innerHTML = `<strong>${escapeHtml(formatDateShort(date))}</strong><span>${escapeHtml(ddayLabel(date))}</span>`;
+        group.appendChild(head);
+
+        items.forEach((item) => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          const top = document.createElement('div');
+          top.className = 'card-top';
+
+          const subject = document.createElement('span');
+          subject.className = 'subject';
+          subject.textContent = item.subject || '과목';
+          top.appendChild(subject);
+
+          if (item.performance) {
+            const perf = document.createElement('span');
+            perf.className = 'performance';
+            perf.textContent = '수행';
+            top.appendChild(perf);
+          }
+
+          const dday = document.createElement('span');
+          dday.className = 'dday';
+          dday.textContent = ddayLabel(date);
+          top.appendChild(dday);
+
+          const content = document.createElement('div');
+          content.className = 'content';
+          content.textContent = item.content || '';
+
+          card.append(top, content);
+          group.appendChild(card);
+        });
+
+        frag.appendChild(group);
+      });
+      wrap.replaceChildren(frag);
+    }
+
+    function filterHomework(items, filter) {
+      if (filter === 'all') return items;
+      if (filter === 'today') return items.filter((i) => i.date === todayKey);
+      if (filter === 'tomorrow') {
+        const t = addDays(todayKey, 1);
+        return items.filter((i) => i.date === t);
+      }
+      const end = addDays(todayKey, 6);
+      return items.filter((i) => i.date >= todayKey && i.date <= end);
+    }
+
+    function koreaDateKey(date) {
+      const parts = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit'
+      }).formatToParts(date);
+      const map = Object.fromEntries(parts.map((p) => [p.type, p.value]));
+      return `${map.year}-${map.month}-${map.day}`;
+    }
+
+    function addDays(dateKey, amount) {
+      const [y,m,d] = dateKey.split('-').map(Number);
+      const date = new Date(Date.UTC(y, m - 1, d + amount, 3, 0, 0));
+      return koreaDateKey(date);
+    }
+
+    function daysBetween(from, to) {
+      const a = Date.parse(from + 'T00:00:00Z');
+      const b = Date.parse(to + 'T00:00:00Z');
+      return Math.round((b - a) / 86400000);
+    }
+
+    function ddayLabel(dateKey) {
+      const diff = daysBetween(todayKey, dateKey);
+      if (diff === 0) return '오늘';
+      if (diff === 1) return '내일';
+      return `D-${diff}`;
+    }
+
+    function formatDateShort(dateKey) {
+      const [y,m,d] = dateKey.split('-').map(Number);
+      const weekday = ['일','월','화','수','목','금','토'][new Date(y, m - 1, d).getDay()];
+      return `${m}월 ${d}일 (${weekday})`;
+    }
+
+    function formatDateLong(dateKey) {
+      const [y,m,d] = dateKey.split('-').map(Number);
+      const weekday = ['일','월','화','수','목','금','토'][new Date(y, m - 1, d).getDay()];
+      return `${y}.${String(m).padStart(2,'0')}.${String(d).padStart(2,'0')} (${weekday})`;
+    }
+
+    function formatUpdated(value) {
+      if (!value) return '미생성';
+      const match = String(value).match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
+      if (!match) return String(value);
+      return `${match[1]}.${match[2]}.${match[3]} ${match[4]}:${match[5]}`;
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+  </script>
+</body>
+</html>
