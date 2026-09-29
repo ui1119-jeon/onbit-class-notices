@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "title": "3학년 4반 학급 안내",
+  "updated_at": "2026-09-29T13:17:11+09:00",
+  "update_times": [
+    "10:00",
+    "13:00",
+    "16:30"
+  ],
+  "homeroom": [
+    {
+      "content": "감기조심하기",
+      "display_order": 1
+    },
+    {
+      "content": "시험기간- 시험대비 철저",
+      "display_order": 2
+    },
+    {
+      "content": "급식 설문조사 시행",
+      "display_order": 3
+    },
+    {
+      "content": "점심시간 3학년 30분 부터",
+      "display_order": 4
+    },
+    {
+      "content": "졸업앨범 조 확인 6교시",
+      "display_order": 5
+    }
+  ],
+  "homework": []
+}
