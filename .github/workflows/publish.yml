@@ -1,0 +1,64 @@
+name: 학급 공개 웹 갱신
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 한국 시각 기준 10:00 / 13:00 / 16:30 예약.
+    # GitHub Actions 작업 실행 시각 자체는 플랫폼 부하로 지연될 수 있음.
+    - cron: '0 1 * * *'     # 10:00 KST
+    - cron: '0 4 * * *'     # 13:00 KST
+    - cron: '30 7 * * *'    # 16:30 KST
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: onbit-public-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 소스 가져오기
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: 파이썬 준비
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 스냅샷 생성 (이때만 Apps Script 조회)
+        env:
+          ONBIT_SOURCE_URL: ${{ secrets.ONBIT_SOURCE_URL }}
+          ONBIT_STAFF_TOKEN: ${{ secrets.ONBIT_STAFF_TOKEN }}
+        run: python scripts/build_snapshot.py
+
+      - name: 스냅샷 보관 (공개 정보만)
+        run: |
+          git config user.name 'onbit-snapshot-bot'
+          git config user.email 'onbit-snapshot-bot@users.noreply.github.com'
+          git add web/snapshot.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update public snapshot'
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+
+      - name: Pages 설정
+        uses: actions/configure-pages@v5
+
+      - name: 정적 페이지 묶기
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: web
+
+      - name: 공개 페이지 게시
+        id: deployment
+        uses: actions/deploy-pages@v4
