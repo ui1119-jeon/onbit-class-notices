@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-10-05T16:41:15+09:00",
+  "updated_at": "2026-10-06T10:14:20+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -9,24 +9,28 @@
   ],
   "homeroom": [
     {
-      "content": "감기조심하기",
+      "content": "감기조심하기(환절기)",
       "display_order": 1
     },
     {
-      "content": "시험기간- 시험대비 철저",
+      "content": "10월 대표일정/ 성적이의 신청기간, 마이스터고 원서접수, 체육대회",
       "display_order": 2
     },
     {
-      "content": "급식 설문조사 시행",
+      "content": "학급 문집 표지 공모전",
       "display_order": 3
     },
     {
-      "content": "점심시간 3학년 30분 부터",
+      "content": "진로포트폴리오 마감기한(10월 16일)",
       "display_order": 4
     },
     {
-      "content": "졸업앨범 조 확인 6교시",
+      "content": "10월 8일 오케스트라 인정 조퇴",
       "display_order": 5
+    },
+    {
+      "content": "과학축전 참가학생 신청(10월 16,17,18)",
+      "display_order": 6
     }
   ],
   "homework": []
