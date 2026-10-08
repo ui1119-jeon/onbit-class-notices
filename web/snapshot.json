@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-10-07T16:39:32+09:00",
+  "updated_at": "2026-10-08T10:16:05+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -31,6 +31,10 @@
     {
       "content": "과학축전 참가학생 신청(10월 16,17,18)",
       "display_order": 6
+    },
+    {
+      "content": "졸업축하글 내용 구상",
+      "display_order": 7
     }
   ],
   "homework": [
