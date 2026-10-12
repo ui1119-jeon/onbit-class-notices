@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-10-12T13:19:24+09:00",
+  "updated_at": "2026-10-12T16:45:06+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -17,24 +17,12 @@
       "display_order": 2
     },
     {
-      "content": "학급 문집 표지 공모전",
+      "content": "진로포트폴리오 마감기한(10월 16일)",
       "display_order": 3
     },
     {
-      "content": "진로포트폴리오 마감기한(10월 16일)",
+      "content": "졸업축하글 내용 쓰기",
       "display_order": 4
-    },
-    {
-      "content": "10월 8일 오케스트라 인정 조퇴",
-      "display_order": 5
-    },
-    {
-      "content": "과학축전 참가학생 신청(10월 16,17,18)",
-      "display_order": 6
-    },
-    {
-      "content": "졸업축하글 내용 구상",
-      "display_order": 7
     }
   ],
   "homework": [
