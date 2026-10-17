@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-10-16T16:58:08+09:00",
+  "updated_at": "2026-10-17T10:27:17+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -26,12 +26,6 @@
     }
   ],
   "homework": [
-    {
-      "date": "2026-10-16",
-      "subject": "영회",
-      "content": "날 멀린쌤 검사",
-      "performance": true
-    },
     {
       "date": "2026-10-21",
       "subject": "영어",
