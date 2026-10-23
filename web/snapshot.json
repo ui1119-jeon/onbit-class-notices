@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-10-23T13:29:21+09:00",
+  "updated_at": "2026-10-23T17:00:39+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -36,6 +36,12 @@
       "date": "2026-10-30",
       "subject": "영어",
       "content": "말하기수행",
+      "performance": true
+    },
+    {
+      "date": "2026-10-30",
+      "subject": "음악",
+      "content": "칼림바드",
       "performance": true
     }
   ]
