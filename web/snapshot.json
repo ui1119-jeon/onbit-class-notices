@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-10-26T17:11:32+09:00",
+  "updated_at": "2026-10-27T10:37:35+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -27,9 +27,15 @@
   ],
   "homework": [
     {
-      "date": "2026-10-26",
-      "subject": "영어",
-      "content": "영어쓰기수행(암기)",
+      "date": "2026-10-29",
+      "subject": "수학",
+      "content": "중단원,대단원풀기",
+      "performance": false
+    },
+    {
+      "date": "2026-10-30",
+      "subject": "수학",
+      "content": "4단원평가",
       "performance": true
     },
     {
