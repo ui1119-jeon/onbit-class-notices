@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-10-28T17:15:03+09:00",
+  "updated_at": "2026-10-29T10:51:14+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -13,16 +13,12 @@
       "display_order": 1
     },
     {
-      "content": "10월 대표일정/ 성적이의 신청기간, 마이스터고 원서접수, 체육대회",
+      "content": "시험기간이 한달이내로 남았음 중학교 마지막 시험 철저",
       "display_order": 2
     },
     {
-      "content": "진로포트폴리오 마감기한(10월 16일)",
+      "content": "조회전 지각 자제",
       "display_order": 3
-    },
-    {
-      "content": "졸업축하글 내용 쓰기",
-      "display_order": 4
     }
   ],
   "homework": [
