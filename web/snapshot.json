@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-11-01T23:23:05+09:00",
+  "updated_at": "2026-11-02T16:27:00+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -19,9 +19,25 @@
     {
       "content": "조회전 지각 자제",
       "display_order": 3
+    },
+    {
+      "content": "오늘까지 부스 서류 제출",
+      "display_order": 4
     }
   ],
   "homework": [
+    {
+      "date": "2026-11-02",
+      "subject": "진로",
+      "content": "문집부스진로",
+      "performance": false
+    },
+    {
+      "date": "2026-11-03",
+      "subject": "과학",
+      "content": "과학수행",
+      "performance": true
+    },
     {
       "date": "2026-11-03",
       "subject": "역사",
