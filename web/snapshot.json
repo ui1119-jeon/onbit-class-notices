@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-11-03T20:47:01+09:00",
+  "updated_at": "2026-11-04T00:21:48+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -21,18 +21,5 @@
       "display_order": 3
     }
   ],
-  "homework": [
-    {
-      "date": "2026-11-03",
-      "subject": "과학",
-      "content": "과학수행",
-      "performance": true
-    },
-    {
-      "date": "2026-11-03",
-      "subject": "역사",
-      "content": "상소문쓰기",
-      "performance": true
-    }
-  ]
+  "homework": []
 }
