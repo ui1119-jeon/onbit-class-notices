@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-11-11T00:41:05+09:00",
+  "updated_at": "2026-11-11T16:34:55+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -21,5 +21,12 @@
       "display_order": 3
     }
   ],
-  "homework": []
+  "homework": [
+    {
+      "date": "2026-11-12",
+      "subject": "과학",
+      "content": "우주탐사 방법 조사",
+      "performance": true
+    }
+  ]
 }
