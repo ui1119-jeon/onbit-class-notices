@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-11-18T01:58:15+09:00",
+  "updated_at": "2026-11-18T17:18:16+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -29,9 +29,15 @@
       "performance": true
     },
     {
-      "date": "2026-11-24",
-      "subject": "수학",
-      "content": "서술형 평가(2문제)",
+      "date": "2026-11-23",
+      "subject": "사회",
+      "content": "환경주제프로젝트",
+      "performance": true
+    },
+    {
+      "date": "2026-11-25",
+      "subject": "정보",
+      "content": "학습지 검",
       "performance": true
     }
   ]
