@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-11-23T00:28:52+09:00",
+  "updated_at": "2026-11-23T17:42:23+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -44,6 +44,12 @@
       "date": "2026-11-25",
       "subject": "정보",
       "content": "학습지 검",
+      "performance": true
+    },
+    {
+      "date": "2026-12-02",
+      "subject": "사회",
+      "content": "책검사 (~183)",
       "performance": true
     }
   ]
