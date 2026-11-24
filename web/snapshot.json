@@ -1,7 +1,7 @@
 {
   "version": 3,
   "title": "3학년 4반 학급 안내",
-  "updated_at": "2026-11-24T04:22:21+09:00",
+  "updated_at": "2026-11-24T19:44:16+09:00",
   "update_times": [
     "10:00",
     "13:00",
@@ -26,6 +26,12 @@
       "date": "2026-11-24",
       "subject": "수학",
       "content": "단원평가",
+      "performance": true
+    },
+    {
+      "date": "2026-11-24",
+      "subject": "수학",
+      "content": "중,대단원 풀기",
       "performance": true
     },
     {
